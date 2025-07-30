@@ -1,0 +1,45 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "create_db",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "database/create_db.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "text_summary_readme",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "database/text_summary_readme.py",
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "uvicorn api",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "server.api:app",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "8000",
+                "--reload"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "gradio",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "server/run_gradio.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+        }
+    ]
+}
